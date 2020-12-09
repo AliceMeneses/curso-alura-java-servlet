@@ -14,7 +14,7 @@ public class NovaEmpresa extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("Cadastrando empresa");
 		
 		String nome = request.getParameter("nome");
