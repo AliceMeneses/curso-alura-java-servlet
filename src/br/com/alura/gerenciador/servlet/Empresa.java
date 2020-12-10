@@ -3,7 +3,7 @@ package br.com.alura.gerenciador.servlet;
 public class Empresa {
 	
 	private int id;
-	private String empresa;
+	private String nome;
 	
 	public int getId() {
 		return id;
@@ -13,12 +13,12 @@ public class Empresa {
 		this.id = id;
 	}
 	
-	public String getEmpresa() {
-		return empresa;
+	public String getNome() {
+		return nome;
 	}
 	
-	public void setEmpresa(String empresa) {
-		this.empresa = empresa;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 	
 	
