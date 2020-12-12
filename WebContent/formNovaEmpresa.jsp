@@ -5,12 +5,14 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Formulário de cadastro</title>
 </head>
 <body>
 	<form action="${linkServletNovaEmpresa}" method="post">
 		<label for="nome">Nome:</label>
-		<input type="text"id="nome" name="nome"/>
+		<input type="text" id="nome" name="nome"/>
+		<label for="data">Data de Entrega:</label>
+		<input type="text" name="data" id="data">
 		<input type="submit"/>
 	</form>
 
