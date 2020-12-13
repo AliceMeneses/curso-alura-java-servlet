@@ -2,10 +2,9 @@ package br.com.alura.gerenciador.servlet;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
-
-import org.apache.jasper.tagplugins.jstl.core.ForEach;
 
 public class BancoDeDados {
 
@@ -55,5 +54,15 @@ public class BancoDeDados {
 			}
 		}
 		return null;
+	}
+
+	public void atualiza(String nomeEmpresa, Date dataAbertura, Integer id) {
+
+		Empresa empresa = this.busca(id);
+		if(empresa != null) {
+			empresa.setDataAbertura(dataAbertura);
+			empresa.setNome(nomeEmpresa);
+		}
+
 	}	
 }
