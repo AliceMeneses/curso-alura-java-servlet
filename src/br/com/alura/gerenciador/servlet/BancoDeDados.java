@@ -5,6 +5,8 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
+import org.apache.jasper.tagplugins.jstl.core.ForEach;
+
 public class BancoDeDados {
 
 	private static List<Empresa> empresas = new ArrayList<>();
@@ -44,5 +46,14 @@ public class BancoDeDados {
 			}
 		}
 	}
-	
+
+	public Empresa busca(Integer id) {
+		for(Empresa empresa : empresas) {
+			
+			if(empresa.getId() == id) {
+				return empresa;
+			}
+		}
+		return null;
+	}	
 }
