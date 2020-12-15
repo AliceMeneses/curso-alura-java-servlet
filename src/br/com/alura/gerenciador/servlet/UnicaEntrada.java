@@ -1,6 +1,7 @@
 package br.com.alura.gerenciador.servlet;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -8,8 +9,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.com.alura.gerenciador.acao.ListaEmpresas;
-import br.com.alura.gerenciador.acao.RemoveEmpresa;
 import br.com.alura.gerenciador.acao.MostraEmpresa;
+import br.com.alura.gerenciador.acao.RemoveEmpresa;
+import br.com.alura.gerenciador.acao.AlteraEmpresa;
 
 @WebServlet("/entrada")
 public class UnicaEntrada extends HttpServlet {
@@ -33,6 +35,10 @@ public class UnicaEntrada extends HttpServlet {
 			MostraEmpresa acao = new MostraEmpresa();
 			acao.executa(request, response);
 			
+		} else if (paramAcao.equals("AlteraEmpresa")) {
+			
+			AlteraEmpresa acao = new AlteraEmpresa();
+			acao.executa(request, response);
 		}
 		
 	}
