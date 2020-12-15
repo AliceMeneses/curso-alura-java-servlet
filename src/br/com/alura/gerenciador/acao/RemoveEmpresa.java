@@ -11,6 +11,7 @@ import br.com.alura.gerenciador.modelo.BancoDeDados;
 public class RemoveEmpresa {
 	
 	public void executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("Removendo Empresa");
 		
 		String id = request.getParameter("id");
 		
