@@ -38,20 +38,20 @@ public class UnicaEntrada extends HttpServlet {
 		} else if (paramAcao.equals("MostraEmpresa")) {
 
 			MostraEmpresa acao = new MostraEmpresa();
-			acao.executa(request, response);
+			nome = acao.executa(request, response);
 
 		} else if (paramAcao.equals("AlteraEmpresa")) {
 
 			AlteraEmpresa acao = new AlteraEmpresa();
-			acao.executa(request, response);
+			nome = acao.executa(request, response);
 		} else if (paramAcao.equals("NovaEmpresa")) {
 
 			NovaEmpresa acao = new NovaEmpresa();
-			acao.executa(request, response);
+			nome = acao.executa(request, response);
 		}
 
 		String[] tipoEEndereco = nome.split(":");
-		System.out.println(tipoEEndereco[1]);
+
 		if (tipoEEndereco[0].equals("forward")) {
 
 			RequestDispatcher rd = request.getRequestDispatcher(tipoEEndereco[1]);
