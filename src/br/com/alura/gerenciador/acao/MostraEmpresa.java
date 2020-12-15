@@ -13,7 +13,8 @@ import br.com.alura.gerenciador.modelo.Empresa;
 public class MostraEmpresa {
 
 	public void executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+		System.out.println("Mostrando Empresa");
+		
 		String id = request.getParameter("id");
 
 		BancoDeDados bancoDeDados = new BancoDeDados();
