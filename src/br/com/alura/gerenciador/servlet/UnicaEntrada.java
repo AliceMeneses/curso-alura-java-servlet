@@ -12,6 +12,8 @@ import br.com.alura.gerenciador.acao.ListaEmpresas;
 import br.com.alura.gerenciador.acao.MostraEmpresa;
 import br.com.alura.gerenciador.acao.RemoveEmpresa;
 import br.com.alura.gerenciador.acao.AlteraEmpresa;
+import br.com.alura.gerenciador.acao.NovaEmpresa;
+
 
 @WebServlet("/entrada")
 public class UnicaEntrada extends HttpServlet {
@@ -38,6 +40,10 @@ public class UnicaEntrada extends HttpServlet {
 		} else if (paramAcao.equals("AlteraEmpresa")) {
 			
 			AlteraEmpresa acao = new AlteraEmpresa();
+			acao.executa(request, response);
+		} else if(paramAcao.equals("NovaEmpresa")) {		
+			
+			NovaEmpresa acao = new NovaEmpresa();
 			acao.executa(request, response);
 		}
 		
