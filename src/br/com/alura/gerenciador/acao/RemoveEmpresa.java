@@ -18,7 +18,7 @@ public class RemoveEmpresa {
 		BancoDeDados bancoDeDados = new BancoDeDados();
 		bancoDeDados.remove(Integer.valueOf(id));
 		
-		response.sendRedirect("listaEmpresas");
+		response.sendRedirect("entrada?acao=ListaEmpresas");
 	}
 
 }
