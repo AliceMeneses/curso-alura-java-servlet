@@ -8,22 +8,30 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.com.alura.gerenciador.acao.ListaEmpresas;
+import br.com.alura.gerenciador.acao.RemoveEmpresa;
+import br.com.alura.gerenciador.acao.MostraEmpresa;
 
 @WebServlet("/entrada")
 public class UnicaEntrada extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String acao = request.getParameter("acao");
+		String paramAcao = request.getParameter("acao");
 		
-		if(acao.equals("ListaEmpresas")) {
+		if(paramAcao.equals("ListaEmpresas")) {
 			
-			ListaEmpresas listaEmpresas = new ListaEmpresas();
-			listaEmpresas.executa(request, response);
+			ListaEmpresas acao = new ListaEmpresas();
+			acao.executa(request, response);
 			
-		} else if(acao.equals("RemoveEmpresa")) {
-
-		} else if(acao.equals("MostraEmpresa")) {
+		} else if(paramAcao.equals("RemoveEmpresa")) {
+			
+			RemoveEmpresa acao = new RemoveEmpresa();
+			acao.executa(request, response);
+			
+		} else if(paramAcao.equals("MostraEmpresa")) {
+			
+			MostraEmpresa acao = new MostraEmpresa();
+			acao.executa(request, response);
 			
 		}
 		
