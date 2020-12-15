@@ -1,7 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
-<c:url value="/alteraEmpresa" var="linkServletNovaEmpresa"/>
+<c:url value="/entrada?acao=AlteraEmpresa" var="linkServletEntradaAcaoAlteraEmpresa"/>
 
 <!DOCTYPE html>
 <html>
@@ -10,7 +10,7 @@
 <title>Formulário de edição de empresas</title>
 </head>
 <body>
-	<form action="${linkServletNovaEmpresa}" method="post">
+	<form action="${linkServletEntradaAcaoAlteraEmpresa}" method="post">
 		<label for="nome">Nome:</label>
 		<input type="text" id="nome" name="nome"/ value="${empresa.nome}">
 		
