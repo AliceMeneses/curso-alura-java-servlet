@@ -9,11 +9,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.alura.gerenciador.acao.AlteraEmpresa;
 import br.com.alura.gerenciador.acao.ListaEmpresas;
 import br.com.alura.gerenciador.acao.MostraEmpresa;
-import br.com.alura.gerenciador.acao.RemoveEmpresa;
-import br.com.alura.gerenciador.acao.AlteraEmpresa;
 import br.com.alura.gerenciador.acao.NovaEmpresa;
+import br.com.alura.gerenciador.acao.NovaEmpresaForm;
+import br.com.alura.gerenciador.acao.RemoveEmpresa;
 
 @WebServlet("/entrada")
 public class UnicaEntrada extends HttpServlet {
@@ -48,6 +49,10 @@ public class UnicaEntrada extends HttpServlet {
 
 			NovaEmpresa acao = new NovaEmpresa();
 			nome = acao.executa(request, response);
+		} else if(paramAcao.equals("NovaEmpresaForm")) {
+			
+			NovaEmpresaForm acao = new NovaEmpresaForm();
+			nome = acao.executa();
 		}
 
 		String[] tipoEEndereco = nome.split(":");
