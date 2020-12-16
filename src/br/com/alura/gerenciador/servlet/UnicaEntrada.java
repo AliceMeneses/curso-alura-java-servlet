@@ -54,7 +54,7 @@ public class UnicaEntrada extends HttpServlet {
 
 		if (tipoEEndereco[0].equals("forward")) {
 
-			RequestDispatcher rd = request.getRequestDispatcher(tipoEEndereco[1]);
+			RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/view/" + tipoEEndereco[1]);
 			rd.forward(request, response);
 		} else {
 
