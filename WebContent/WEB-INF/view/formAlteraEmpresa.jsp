@@ -10,6 +10,8 @@
 <title>Formulário de edição de empresas</title>
 </head>
 <body>
+	<c:import url="logout-parcial.jsp"/>
+	
 	<form action="${linkServletEntrada}" method="post">
 		<label for="nome">Nome:</label>
 		<input type="text" id="nome" name="nome"/ value="${empresa.nome}">
